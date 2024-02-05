@@ -46,7 +46,7 @@ header("location:index.php?page=home");
 		background:#59b6ec61;
 		display: flex;
 		align-items: center;
-		background: url(assets/img/recruitment-cover.jpg);
+		background: url(assets/img/Welcom.png);
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}
