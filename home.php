@@ -1,3 +1,6 @@
+<!-- <?php
+include 'admin/db_connect.php';
+?> -->
 <?php
 include 'admin/db_connect.php';
 ?>
