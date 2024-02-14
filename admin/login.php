@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin | Recruitment Management System</title>
+  <title>Admin | Recruitment Portal Management System</title>
  	
 
 <?php include('./header.php'); ?>

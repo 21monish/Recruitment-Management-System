@@ -7,6 +7,7 @@
     width: 50% !important;
     max-width: unset;
   }
+  
  </style>
  <script>
  	$('.datepicker').datepicker({

@@ -22,10 +22,10 @@ include 'admin/db_connect.php';
     }
 </style>
 <header class="masthead">
-    <div class="container-fluid h-100">
+    <div class="container-fluid pt-5">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end mb-4 page-title">
-                <h3 class="text-white">Welcome to
+            <div class="col-lg-10 align-self-end mb-4 page-title">
+                <h3 class="text-white">Welcome to 
                     <?php echo $_SESSION['setting_name']; ?>
                 </h3>
                 <hr class="divider my-4" />
@@ -48,9 +48,9 @@ include 'admin/db_connect.php';
 
         </div>
     </div>
-</header>
+</header> 
 <section id="list">
-    <div class="container mt-3 pt-2">
+    <div class="container pt-5 pb-5">
         <h4 class="text-center">Vacancy List</h4>
         <hr class="divider">
         <div class="row">

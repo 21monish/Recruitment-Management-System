@@ -47,6 +47,10 @@
   box-sizing: border-box;
 }
 
+a:active{
+  color: #b6ef00 !important;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -2021,9 +2025,9 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #fbc2b3;
+  border-color: #b6ef00;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(244, 98, 58, 0.25);
+  box-shadow: 0 0 0 0.2rem #b6ef00;
 }
 .form-control::-webkit-input-placeholder {
   color: #6c757d;
@@ -2471,32 +2475,32 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #b6ef00;
+  border-color: #b6ef00;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #008eff;
-  border-color: #0041ff;
+  background-color: #b6ef00;
+  border-color: #b6ef00;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #008eff;
-  border-color: #0041ff;
-  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+  background-color: #b6ef00;
+  border-color: #b6ef00;
+  box-shadow: 0 0 0 0.2rem #b6ef00;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #b6ef00;
+  border-color: #b6ef00;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0041ff;
-  border-color: #e23a0d;
+  background-color: #b6ef00;
+  border-color: #b6ef00;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+  box-shadow: 0 0 0 0.2rem #b6ef00;
 }
 
 .btn-secondary {
@@ -4288,7 +4292,7 @@ input[type=button].btn-block {
 }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: #fff;
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -6155,7 +6159,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #000 !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -10007,7 +10011,7 @@ html {
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #007bff;
+  border-color: #b6ef00;
 }
 
 hr.light {
@@ -10039,7 +10043,7 @@ hr.light {
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: #212529;
+  color: #fff;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #6c757d;
@@ -10094,9 +10098,9 @@ hr.light {
 }
 
 header.masthead {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgb(0 0 0 / 40%) 0%, rgb(245 242 240 / 45%) 100%), url(../assets/img/theater-bg.jpg);
+  /* background: linear-gradient(to bottom, rgb(0 0 0 / 40%) 0%, rgb(245 242 240 / 45%) 100%), url(../assets/img/theater-bg.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10109,7 +10113,7 @@ header.masthead h1 {
   header.masthead {
    height: 60vh;
     min-height: 60vh;
-    padding-top: 4.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 0;
   }
   header.masthead p {
@@ -10220,11 +10224,11 @@ header.masthead h1 {
     top: 3.5rem;
 }
 nav#mainNav {
-    background: #00000099;
+    background: #000000;
     color: white !important;
 }
 .align-self-end.mb-4.page-title {
-       background: #0000007a;
+       background: #000000;
     border-radius: 15px;
 }
 div#menu-field {
@@ -10348,7 +10352,7 @@ div#menu-field img, div#menu-field .menu-item-details {
 }
 #mainNav.navbar-scrolled {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #08c;
+    background-color: #b6ef00;
     color: white !important;
 }
 #mainNav.navbar-scrolled .navbar-brand {
