@@ -25,13 +25,13 @@ include 'admin/db_connect.php';
     <div class="container-fluid pt-5">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end mb-4 page-title">
-                <h3 class="text-white">Welcome to 
+                <h3 class="text-white">Welcome to
                     <?php echo $_SESSION['setting_name']; ?>
                 </h3>
                 <hr class="divider my-4" />
                 <div class="col-md-12 mb-2 text-left">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" style="background-color: white;color: black;">
                             <h4 class="text-center">Find Vacancies</h4>
                             <div class="form-group">
                                 <div class="input-group">
@@ -48,7 +48,7 @@ include 'admin/db_connect.php';
 
         </div>
     </div>
-</header> 
+</header>
 <section id="list">
     <div class="container pt-5 pb-5">
         <h4 class="text-center">Vacancy List</h4>
@@ -78,7 +78,7 @@ include 'admin/db_connect.php';
                             <larger class="truncate filter-txt">
                                 <?php echo strip_tags($desc) ?>
                             </larger>
-                            
+
                             <hr class="divider" style="max-width: calc(80%)">
 
                         </div>

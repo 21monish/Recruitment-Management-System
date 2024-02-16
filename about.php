@@ -1,19 +1,34 @@
- <!-- Masthead-->
-        <header class="masthead">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-10 align-self-end mb-4" style="background: #0000002e;">
-                    	 <h1 class="text-uppercase text-white font-weight-bold">About Us</h1>
-                        <hr class="divider my-4" />
-                    </div>
-                    
-                </div>
-            </div>
-        </header>
+<!-- Masthead-->
 
-    <section class="page-section">
-        <div class="container">
-    <?php echo html_entity_decode($_SESSION['setting_about_content']) ?>        
-            
-        </div>
-        </section>
+<section class="page-section">
+    <div class="container">
+        <?php echo html_entity_decode($_SESSION['setting_about_content']) ?>
+
+    </div>
+</section>
+
+
+<style>
+    span {
+        color: rgb(0, 0, 0) !important;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    b {
+        margin: 0px;
+        padding: 0px;
+        color: rgb(0, 0, 0) !important;
+        font-family: "Open Sans", Arial, sans-serif;
+        text-align: justify;
+    }
+    p{
+        text-align: center;
+    margin-bottom: 15px;
+    padding: 0px;
+    color: rgb(0, 0, 0)  !important;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+    }
+</style>

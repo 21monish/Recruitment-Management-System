@@ -18,7 +18,7 @@
   			</div>
   		</div>
       <div class="col-md-4 float-left text-white">
-        <large><b>Recruitment Portal Management System</b></large>
+        <large><b>Hiring Harmany</b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white">
 	  		<a href="ajax.php?action=logout" class="text-white"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off"></i></a>
