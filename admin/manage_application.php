@@ -14,7 +14,7 @@
 	while($row=$qry->fetch_assoc()){
 		$pos[$row['id']] = $row['position'];
 	}
-	$rs = $conn->query("SELECT * FROM recruitment_status ");
+	$rs = $conn->query("SELECT * FROM recruitment_status where status = 1 ");
 	while($row=$rs->fetch_assoc()){
 		$stat[$row['id']] = $row['status_label'];
 	}
