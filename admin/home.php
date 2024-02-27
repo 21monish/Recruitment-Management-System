@@ -101,8 +101,7 @@
 
                             </div>
                         </div>
-                    <?php endif; ?>
-                    
+
 
                         <?php
                         $recruitment_status = $conn->query("SELECT * FROM recruitment_status where status = 1  ");
@@ -114,10 +113,12 @@
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="mr-3">
-                                                <div class="text-white-75 small"><?php echo $row['status_label'] ?></div>
+                                                <div class="text-white-75 small">
+                                                    <?php echo $row['status_label'] ?>
+                                                </div>
                                                 <div class="text-lg font-weight-bold">
                                                     <?php
-                                                     $id =  $row['id'];
+                                                    $id = $row['id'];
                                                     $application = $conn->query("SELECT * FROM application where process_id = $id ; ");
                                                     echo $application->num_rows;
                                                     ?>
@@ -133,7 +134,8 @@
 
                             <br>
                         <?php endwhile; ?>
-                    
+
+                    <?php endif; ?>
                     <div class="col-md-3">
                         <div class="card bg-warning text-white mb-1">
                             <div class="card-body">

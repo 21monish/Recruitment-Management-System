@@ -26,6 +26,7 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 							<div class="col-lg-12">
 								<span><large><b>Application List</b></large></span>
 								<button class="btn btn-sm btn-block btn-primary btn-sm col-md-2 float-right" type="button" id="new_application"><i class="fa fa-plus"></i> New Applicant</button>
+								<a href="export.php" class="btn btn-success"> <i class="dwn"></i> Export</a>
 							</div>
 						</div>
 						
