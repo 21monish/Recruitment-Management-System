@@ -6,6 +6,10 @@ foreach($user->fetch_array() as $k =>$v){
 	$meta[$k] = $v;
 }
 }
+$rs = $conn->query("SELECT * FROM user_category where status = 1 ");
+	while($row=$rs->fetch_assoc()){
+		$stat[$row['id']] = $row['status_label'];
+	}
 ?>
 <div class="container-fluid">
 	
@@ -26,8 +30,11 @@ foreach($user->fetch_array() as $k =>$v){
 		<div class="form-group">
 			<label for="type">User Type</label>
 			<select name="type" id="type" class="custom-select">
-				<option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
-				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>Staff</option>
+					<?php foreach($stat as $k => $v): ?>
+						<option value="<?php echo $k ?>" <?php echo isset($process_id) && $process_id == $k ? "selected" : '' ?>><?php echo $v ?></option>
+					<?php endforeach; ?>
+				<!-- <option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
+				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>Staff</option> -->
 			</select>
 		</div>
 	</form>

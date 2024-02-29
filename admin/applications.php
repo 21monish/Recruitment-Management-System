@@ -26,7 +26,6 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 							<div class="col-lg-12">
 								<span><large><b>Application List</b></large></span>
 								<button class="btn btn-sm btn-block btn-primary btn-sm col-md-2 float-right" type="button" id="new_application"><i class="fa fa-plus"></i> New Applicant</button>
-								<a href="export.php" class="btn btn-success"> <i class="dwn"></i> Export</a>
 							</div>
 						</div>
 						
@@ -35,7 +34,7 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="row">
-									<div class="col-md-2 offset-md-2 text-right">Position :</div>
+									<div class="col-md-1 offset-md-2 text-right">Position :</div>
 									<div class="col-md-5">
 										<select name="" class="custom-select browser-default select2" id="position_filter">
 											<option value="all"  <?php echo isset($position_id) && $position_id == "all" ? "selected" : '' ?>>All</option>
@@ -44,6 +43,12 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 											<?php endforeach; ?>
 										</select>
 									</div>
+									<div class="col-md-2  text-right"></div>
+									<div class="col-md-2">
+									<!-- <i type="hide" class="fa fa-dwn"></i> -->
+										<a href="export.php" class="btn btn-success"> <i class="fas fa-file-export"></i> Export</a> 
+									</div>
+
 								</div>
 							</div>
 						</div>

@@ -146,6 +146,24 @@ Class Action {
 		if($delete)
 			return 1;
 	}
+	
+	function save_user_category(){
+		extract($_POST);
+		$data = " status_label = '$status_label' ";
+		if(empty($id)){
+			$save = $this->db->query("INSERT INTO user_category set ".$data);
+		}else{
+			$save = $this->db->query("UPDATE user_category set ".$data." where id=".$id);
+		}
+		if($save)
+			return 1;
+	}
+	function delete_user_category(){
+		extract($_POST);
+		$delete = $this->db->query("UPDATE user_category set status = 0 where id = ".$id);
+		if($delete)
+			return 1;
+	}
 	function save_vacancy(){
 		extract($_POST);
 		$data = " position = '$position' ";

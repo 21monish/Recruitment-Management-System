@@ -54,6 +54,16 @@ if($action == "delete_recruitment_status"){
 	if($save)
 		echo $save;
 }
+if($action == "save_user_category"){
+	$save = $crud->save_user_category();
+	if($save)
+		echo $save;
+}
+if($action == "delete_user_category"){
+	$save = $crud->delete_user_category();
+	if($save)
+		echo $save;
+}
 if($action == "save_vacancy"){
 	$save = $crud->save_vacancy();
 	if($save)
