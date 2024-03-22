@@ -1,9 +1,10 @@
 <?php 
 include('db_connect.php');
 if(isset($_GET['id'])){
-$user = $conn->query("SELECT * FROM users where id =".$_GET['id']);
+$user = $conn->query("SELECT u.*,uc.status_label FROM users u inner join user_category uc on uc.id = u.type where u.id =".$_GET['id']);
+//SELECT  a.*,v.position FROM application a inner join vacancy v on v.id = a.position_id where a.id=".$_GET['id']
 foreach($user->fetch_array() as $k =>$v){
-	$meta[$k] = $v;
+	$$k = $v;
 }
 }
 $rs = $conn->query("SELECT * FROM user_category where status = 1 ");
@@ -17,21 +18,21 @@ $rs = $conn->query("SELECT * FROM user_category where status = 1 ");
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
 		<div class="form-group">
 			<label for="name">Name</label>
-			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
+			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($name) ? $name: '' ?>" required>
 		</div>
 		<div class="form-group">
 			<label for="username">Username</label>
-			<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($meta['username']) ? $meta['username']: '' ?>" required>
+			<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($username) ? $username: '' ?>" required>
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label>
-			<input type="password" name="password" id="password" class="form-control" value="<?php echo isset($meta['password']) ? $meta['password']: '' ?>" required>
+			<input type="password" name="password" id="password" class="form-control" value="<?php echo isset($password) ? $password: '' ?>" required>
 		</div>
 		<div class="form-group">
 			<label for="type">User Type</label>
 			<select name="type" id="type" class="custom-select">
 					<?php foreach($stat as $k => $v): ?>
-						<option value="<?php echo $k ?>" <?php echo isset($process_id) && $process_id == $k ? "selected" : '' ?>><?php echo $v ?></option>
+						<option value="<?php echo $k ?>" <?php echo isset($type) && $type == $k ? "selected" : '' ?>><?php echo $v ?></option>
 					<?php endforeach; ?>
 				<!-- <option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
 				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>Staff</option> -->
