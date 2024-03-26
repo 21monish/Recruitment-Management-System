@@ -19,13 +19,15 @@
 					<th class="text-center">#</th>
 					<th class="text-center">Name</th>
 					<th class="text-center">Username</th>
+					<th class="text-center">UserType</th>
 					<th class="text-center">Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
  					include 'db_connect.php';
- 					$users = $conn->query("SELECT * FROM users order by name asc");
+ 					//$users = $conn->query("SELECT * FROM users order by name asc");
+ 					$users = $conn->query("SELECT u.*,uc.status_label FROM users u inner join user_category uc on uc.id = u.type ");
  					$i = 1;
  					while($row= $users->fetch_assoc()):
 				 ?>
@@ -38,6 +40,9 @@
 				 	</td>
 				 	<td>
 				 		<?php echo $row['username'] ?>
+				 	</td>
+				 	<td>
+				 		<?php echo $row['status_label'] ?>
 				 	</td>
 				 	<td>
 				 		<center>

@@ -59,6 +59,13 @@ if(isset($_GET['id'])){
 						location.reload()
 					},1000)
 				}
+				else
+				{
+					setTimeout(function(){
+						location.reload()
+					},1000)
+					alert_toast("Data Already Exest",'danger');
+				}
 			}
 		})
 	})

@@ -18,8 +18,8 @@ while ($row = mysqli_fetch_array($result)) {
 <script type="text/javascript" src="assets/js/Chart.min.js"></script>
 <div class="containe-fluid">
 
-    <div class="row mt-3 ml-3 mr-3">
-        <?php if ($_SESSION['login_type'] == 1): ?>
+    <?php if ($_SESSION['login_type'] == 1): ?>
+        <div class="row mt-3 ml-3 mr-3">
 
 
             <div class="col-lg-6">
@@ -40,8 +40,8 @@ while ($row = mysqli_fetch_array($result)) {
                     </div>
                 </div>
             </div>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
 
 
     <div class="row mt-3 ml-3 mr-3">
@@ -94,7 +94,7 @@ while ($row = mysqli_fetch_array($result)) {
 
                             </div>
                         </div>
-                        <div class="col-md-3 ">
+                        <!-- <div class="col-md-3 ">
                             <div class="card bg-primary text-white mb-1">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -113,13 +113,13 @@ while ($row = mysqli_fetch_array($result)) {
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-md-3">
                             <div class="card bg-warning text-white mb-1">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="mr-3">
-                                            <div class="text-white-75 small">Inactive Vacanies</div>
+                                            <div class="text-white-75 small">Closed Vacanies</div>
                                             <div class="text-lg font-weight-bold">
                                                 <?php
                                                 $vacancies = $conn->query("SELECT * FROM vacancy where status = 0  ");

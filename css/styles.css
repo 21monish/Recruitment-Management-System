@@ -12,7 +12,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+
+  --my-color1: #b6ef00;
+  --my-color2: #007bff;
+  --b: #000000;
+  --w: #fff;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -49,7 +53,7 @@
 }
 
 a:active {
-  color: #b6ef00 !important;
+  color: var(--my-color1) !important;
 }
 
 html {
@@ -192,7 +196,7 @@ a {
 }
 
 a:hover {
-  color: #d6370c;
+  color: var(--my-color1);
   text-decoration: underline;
 }
 
@@ -2206,7 +2210,7 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #b6ef00;
+  border-color: var(--my-color1);
   outline: 0;
   box-shadow: 0 0 0 0.2rem #b6ef00;
 }
@@ -6389,7 +6393,7 @@ a.close.disabled {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto;
+    margin: 1.7rem auto;
   }
 
   .modal-dialog-scrollable {

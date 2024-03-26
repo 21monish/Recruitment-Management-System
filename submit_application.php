@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">Contact</label>
-				<input type="text" class="form-control" name="contact" required="">
+				<input type="number" class="form-control" name="contact" required="">
 			</div>
 		</div>
 		<div class="row form-group">

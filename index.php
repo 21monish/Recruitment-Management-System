@@ -41,7 +41,9 @@ include('header.php');
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=All_Jobs">All Jobs</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="admin/login.php">login</a></li>
 
 
         </ul>
@@ -103,6 +105,8 @@ include('header.php');
     </div>
   </div>
   <div id="preloader"></div>
+
+
   <footer class="bg-light py-5">
     <div class="container" style="color: white;">
       <div class="row justify-content-center">
@@ -129,9 +133,11 @@ include('header.php');
     </div>
     <br>
     <div class="container">
-      <div class="small text-center text-muted">Welcome -
-        <?php echo $_SESSION['setting_name'] ?> | <a href="https://1sourcecodr.blogspot.com" target="_blank">1 Source
-          Code</a>
+      <div class="small text-center text-muted"> | Welcome -
+        <?php echo $_SESSION['setting_name'] ?> |
+      </div>
+      <div class="small text-center text-muted"> 
+        | Created By Monish D.Kanojiya|
       </div>
     </div>
   </footer>

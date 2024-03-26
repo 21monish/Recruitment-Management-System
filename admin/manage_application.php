@@ -64,7 +64,7 @@
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">Contact</label>
-				<input type="text" class="form-control" name="contact" required="" value="<?php echo isset($contact) ? $contact:''  ?>">
+				<input type="number" class="form-control" name="contact" required="" value="<?php echo isset($contact) ? $contact:''  ?>">
 			</div>
 		</div>
 		<div class="row form-group">
@@ -145,6 +145,12 @@ $(document).ready(function(){
 					setTimeout(function(){
 						location.reload()
 					},1000)
+				}
+				else{
+					setTimeout(function(){
+						location.reload()
+					},1000)
+					alert_toast('Application submission failed. Please try again later.','danger')
 				}
 			}
 		})

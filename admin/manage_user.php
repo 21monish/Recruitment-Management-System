@@ -55,6 +55,13 @@ $rs = $conn->query("SELECT * FROM user_category where status = 1 ");
 						location.reload()
 					},1500)
 				}
+				else
+				{
+					alert_toast("User Already Exest",'danger');
+					setTimeout(function(){
+						location.reload()
+					},1500)
+				}
 			}
 		})
 	})
