@@ -57,13 +57,13 @@ if(isset($_GET['id'])){
 					alert_toast("Data successfully saved.",'success')
 					setTimeout(function(){
 						location.reload()
-					},1000)
+					},2000)
 				}
 				else
 				{
 					setTimeout(function(){
 						location.reload()
-					},1000)
+					},2000)
 					alert_toast("Data Already Exest",'danger');
 				}
 			}

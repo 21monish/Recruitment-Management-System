@@ -9,6 +9,42 @@
   }
   
  </style>
+ <body>
+ <footer class="bg-light py-5">
+    <div class="container" style="color: white;">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Contact us</h2>
+          <hr class="divider my-4" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fas fa-rotate-90 fa-phone fa-3x mb-3" style="color: var(--my-color2);"></i>
+          <div>
+            <?php echo $_SESSION['setting_contact'] ?>
+          </div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 " style="color: var(--my-color2);"></i>
+          <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+          <a class="d-block" href="mailto:<?php echo $_SESSION['setting_email'] ?>">
+            <?php echo $_SESSION['setting_email'] ?>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="small text-center text-muted"> | Welcome -
+        <?php echo $_SESSION['setting_name'] ?> |
+      </div>
+      <div class="small text-center text-muted"> 
+        | Created By Monish D.Kanojiya|
+      </div>
+    </div>
+  </footer>
+ </body>
  <script>
  	$('.datepicker').datepicker({
  		format:"yyyy-mm-dd"

@@ -17,10 +17,10 @@ include('header.php');
 
 <style>
   header.masthead {
-    /* background: url(admin/assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
+     /* background: url(admin/assets/img/<?php echo $_SESSION['setting_cover_img'] ?>);  */
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #000;
+    background-color:  var(--my-color2); 
   }
 </style>
 
@@ -107,7 +107,7 @@ include('header.php');
   <div id="preloader"></div>
 
 
-  <footer class="bg-light py-5">
+  <!-- <footer class="bg-light py-5">
     <div class="container" style="color: white;">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -117,14 +117,13 @@ include('header.php');
       </div>
       <div class="row">
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-          <i class="fas fa-rotate-90 fa-phone fa-3x mb-3" style="color: #b6ef00;"></i>
+          <i class="fas fa-rotate-90 fa-phone fa-3x mb-3" style="color: var(--my-color2);"></i>
           <div>
             <?php echo $_SESSION['setting_contact'] ?>
           </div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 " style="color: #b6ef00;"></i>
-          <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+          <i class="fas fa-envelope fa-3x mb-3 " style="color: var(--my-color2);"></i>
           <a class="d-block" href="mailto:<?php echo $_SESSION['setting_email'] ?>">
             <?php echo $_SESSION['setting_email'] ?>
           </a>
@@ -140,7 +139,7 @@ include('header.php');
         | Created By Monish D.Kanojiya|
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <?php include('footer.php') ?>
 </body>

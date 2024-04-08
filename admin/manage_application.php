@@ -144,12 +144,12 @@ $(document).ready(function(){
 					alert_toast('Application successfully submitted.','success')
 					setTimeout(function(){
 						location.reload()
-					},1000)
+					},2000)
 				}
 				else{
 					setTimeout(function(){
 						location.reload()
-					},1000)
+					},2000)
 					alert_toast('Application submission failed. Please try again later.','danger')
 				}
 			}

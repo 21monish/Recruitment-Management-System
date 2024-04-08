@@ -51,9 +51,14 @@ include 'admin/db_connect.php';
 </header>
 <section id="list">
     <div class="container pt-5 pb-5">
-        <h4 class="text-center">Vacancy List</h4>
-        <hr class="divider">
+        <!-- <h4 class="text-center">Vacancy List</h4>
+        <hr class="divider"> -->
         <div class="row">
+            <div class="col-lg-12">
+                <div class="heading-data1">
+                    <h2>Recent Jobs</h2>
+                </div>
+            </div>
 
             <?php
             $vacancy = $conn->query("SELECT * FROM vacancy order by date(date_created) desc ");
@@ -64,7 +69,7 @@ include 'admin/db_connect.php';
                 $desc = str_replace(array("<li>", "</li>"), array("", ","), $desc);
                 ?>
 
-                <div class="col-md-6 ">
+                <!-- <div class="col-md-6 ">
                     <div class="card vacancy-list mt-2 mb-3" data-id="<?php echo $row['id'] ?>">
 
                         <div class="card-body">
@@ -83,8 +88,41 @@ include 'admin/db_connect.php';
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
+                <div class="col-lg-12">
+                    <div class="job-data">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="job-title">
+                                    <h3>
+                                        <?php echo $row['position'] ?>
+                                    </h3>
+                                </div>
+                                <div class="category-data">
+                                    <p>Availability :
+                                        <?php echo $row['availability'] ?>
+                                    </p>
+                                </div>
+                                <!-- <div class="company-name">
+                                    <p>Company : Banks & Hobs</p>
+                                </div> -->
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="job-details">
+                                    <larger class="truncate filter-txt">
+                                        <?php echo strip_tags($desc) ?>
+                                    </larger>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="apply-btn-data" data-id="<?php echo $row['id'] ?>">
+                                    <a class="apply-btn" href="#">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <br>
             <?php endwhile; ?>
@@ -94,19 +132,22 @@ include 'admin/db_connect.php';
 
 
 <script>
-    $('.card.vacancy-list').click(function () {
+    $('.apply-btn-data').click(function () {
         location.href = "index.php?page=view_vacancy&id=" + $(this).attr('data-id')
     })
+    // $('.card.vacancy-list').click(function () {
+    //     location.href = "index.php?page=view_vacancy&id=" + $(this).attr('data-id')
+    // })
     $('#filter').keyup(function (e) {
         var filter = $(this).val()
 
-        $('.card.vacancy-list .filter-txt').each(function () {
+        $('.job-data .job-title').each(function () {
             var txto = $(this).html();
             txt = txto
             if ((txt.toLowerCase()).includes((filter.toLowerCase())) == true) {
-                $(this).closest('.card').toggle(true)
+                $(this).closest('.job-data').toggle(true)
             } else {
-                $(this).closest('.card').toggle(false)
+                $(this).closest('.job-data').toggle(false)
 
             }
         })

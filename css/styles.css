@@ -13,7 +13,7 @@
  */
 :root {
 
-  --my-color1: #b6ef00;
+  --my-color1: #0061a5;
   --my-color2: #007bff;
   --b: #000000;
   --w: #fff;
@@ -110,15 +110,16 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #fff !important;
+  /* color: #fff !important; */
 }
 
-span{
+/* span{
  color: #fff !important;
-}
-b{
+} */
+
+/* b{
  color: #fff !important;
-}
+} */
 
 abbr[title],
 abbr[data-original-title] {
@@ -190,13 +191,13 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: var(--w);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: var(--my-color1);
+  color: var(--my-color2);
   text-decoration: underline;
 }
 
@@ -7088,7 +7089,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #000 !important;
+  background-color: var(--my-color1) !important;
 }
 
 a.bg-light:hover,
@@ -10832,7 +10833,7 @@ a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: var(--my-color2);
 }
 
 .text-black-50 {
@@ -11097,8 +11098,8 @@ header.masthead h1 {
 
 @media (min-width: 992px) {
   header.masthead {
-    height: 60vh;
-    min-height: 60vh;
+    /* height: 60vh;
+    min-height: 60vh; */
     padding-top: 2.5rem;
     padding-bottom: 0;
   }
@@ -11253,7 +11254,7 @@ nav#mainNav {
 }
 
 .align-self-end.mb-4.page-title {
-  background: #000000;
+  /* background: #000000; */
   border-radius: 15px;
 }
 
@@ -11281,8 +11282,8 @@ div#menu-field .menu-item-details {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  font-size: small;
-  color: #fff;
+  /* font-size: small;
+  color: #fff; */
   font-style: italic;
 }
 
@@ -11394,7 +11395,7 @@ div#menu-field .menu-item-details {
 
 #mainNav.navbar-scrolled {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #b6ef00;
+  background-color: var(--my-color1);
   color: white !important;
 }
 
@@ -11446,4 +11447,137 @@ div#menu-field .menu-item-details {
 
 section {
   background: #fff;
+}
+
+/*                    new               */
+
+.banner-title{
+  padding: 65px 0 250px 0;
+}
+.title-sec h1{
+  font-size: 75px;
+  line-height: 84px;
+  font-weight: 600;
+}
+
+.title-sec h1 span.highlight-color{
+  color: #3637f5 !important;
+}
+
+.banner-sec-img{
+  background-color:#3637f5 ;
+}
+
+.banner-img img{
+  width: 100%;
+  height: auto;
+  margin-top: -200px;
+}
+
+
+.recent-job-sec{
+  padding: 50px 0;
+}
+
+
+.why-suited{
+  background-color: #3637f5;
+  padding: 50px 0;
+}
+
+.heading-data2 h2{
+  margin-bottom: 40px !important;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+#counter {
+  text-align: center;
+  width: 100%;
+}
+#counter .item {
+  background: #fff;
+  
+  padding: 35px 23px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
+}
+#counter .item .count {
+  color: #3637f5;
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+#counter .item h3 {
+  font-size: 18px;
+  color: #4f4e28;
+  text-transform: capitalize;
+}
+
+#counter .item h1::after{
+  content: '+';
+}
+
+.job-data{
+  border-top: 1px solid #000;
+  padding: 50px 0;
+}
+.heading-data1 h2{
+  margin-bottom: 14px !important;
+  font-size: 40px;
+  font-weight: 600;
+}
+.job-title h3{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 35px !important;
+}
+
+.apply-btn{
+  float: right;
+  /* margin: 0 100px; */
+  background-color: #fff;
+  display: inline;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  padding: 10px 50px;
+  border: 1px solid #000;
+} 
+.apply-btn a{
+  color: #000 ;
+}
+.apply-btn:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.apply-btn:hover a{
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .apply-btn{
+    margin: 0;
+    margin-top: 20px !important;
+  }
+  .banner-title{
+    padding: 1px 0 120px 0;
+  }
+  .banner-sec-img{
+    height: 140px;
+  }
+  .banner-img img{
+    margin-top: -110px;
+  }
+  .apply-btn{
+    display: block;
+    text-align: center;
+  }
 }

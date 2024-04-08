@@ -15,12 +15,12 @@
 		$$k = $v;
 	}
 	?>
-	<div class="container mb-2 pt-4 ">
+	<!-- <div class="container mb-2 pt-4 ">
 		<div class="card">
 			<div class="card-body">
 				<div class="row">
 					<div class="col-lg-12">
-						<h4 class="text-center"><b>
+						<h4 class="job-title"><b>
 								<?php echo $position ?>
 							</b></h4>
 						<hr class="divider" style="max-width: calc(10%)">
@@ -60,6 +60,53 @@
 				</div>
 			</div>
 		</div>
+	</div> -->
+	<div class="apply-data">
+
+		<div class="container mb-4 pt-4">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="job-title-detail">
+						<h1><i class="fa-light fa-dash"></i>
+							<?php echo $position ?><i class="fa-light fa-dash"></i>
+						</h1>
+						<hr>
+						<h5><i class="fa-light fa-dash"></i><b>Needed</b>:
+							<?php echo $availability ?><i class="fa-light fa-dash"></i>
+							<?php if ($status == 1): ?>
+								<span class="badge badge-success pt-2">Hiring</span>
+							<?php else: ?>
+								<span class="badge badge-danger pt-2">Closed</span>
+							<?php endif; ?>
+						</h5>
+						<hr>
+						<div class="col-lg-12">
+							<?php echo html_entity_decode($description) ?>
+						</div>
+						<hr>
+						<br>
+					</div>
+				</div>
+				<!-- <div class="col-lg-3"></div>
+			<div class="col-lg-3"></div>
+			<div class="col-lg-3"></div> -->
+				<!-- <div class="col-lg-3">
+				<div class="apply-btn">
+					<a class="apply-btn-data" href="#">Apply</a>
+				</div>
+			</div> -->
+				<div class="col-lg-12">
+					<?php if ($status == 1): ?>
+						<button class="apply-btn apply-btn-data" type="button" id="apply_now">Apply Now</button>
+
+					<?php else: ?>
+						<button class="apply-btn" type="button" disabled="" id="">Application Closed</button>
+					<?php endif; ?>
+
+				</div>
+			</div>
+		</div>
+
 	</div>
 </section>
 <script>

@@ -53,14 +53,14 @@ $rs = $conn->query("SELECT * FROM user_category where status = 1 ");
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
 						location.reload()
-					},1500)
+					},2500)
 				}
 				else
 				{
 					alert_toast("User Already Exest",'danger');
 					setTimeout(function(){
 						location.reload()
-					},1500)
+					},2500)
 				}
 			}
 		})

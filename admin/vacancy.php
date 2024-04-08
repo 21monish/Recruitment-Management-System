@@ -93,7 +93,11 @@
 	}
 </style>
 <script>
-	$('table').dataTable()
+	$('table').dataTable(
+		{
+			"lengthMenu": [8,25,50,100],
+		}
+	);
 	$("#new_vacancy").click(function(){
 		uni_modal("New Vacancy","manage_vacancy.php","mid-large")
 	})
